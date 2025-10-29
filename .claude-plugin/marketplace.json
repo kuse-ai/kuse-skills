@@ -28,7 +28,8 @@
       "skills": [
         "./modern-web-design",
         "./landing-page-creator",
-        "./ui-component-builder"
+        "./ui-component-builder",
+        "./backstage-style-web"
       ]
     }
   ]
