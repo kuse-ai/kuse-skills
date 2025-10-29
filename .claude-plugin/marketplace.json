@@ -1,0 +1,35 @@
+{
+  "name": "kuse-ai-skills",
+  "owner": {
+    "name": "Kuse AI",
+    "email": "contact@kuse.ai"
+  },
+  "metadata": {
+    "description": "Professional AI-powered skills for content creation, web design, and business optimization",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "content-skills",
+      "description": "Professional content creation and optimization tools including Ken-style social media content, SEO optimization, and brand voice management",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./ken-style-social-media",
+        "./content-optimization",
+        "./brand-voice-generator"
+      ]
+    },
+    {
+      "name": "design-skills",
+      "description": "Modern web design and UI development tools for creating professional websites, landing pages, and interactive experiences",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./modern-web-design",
+        "./landing-page-creator",
+        "./ui-component-builder"
+      ]
+    }
+  ]
+}
