@@ -200,8 +200,8 @@ React 18+ + TypeScript
 ### 色彩系统
 ```css
 /* 品牌色 */
---brand-500: #2B7FFF;  /* 主色 */
---brand-600: #155DFA;  /* 悬停色 */
+--brand-500: #6a4040;  /* 主色 */
+--brand-600: #553333;  /* 悬停色 */
 
 /* 功能色 */
 --success: emerald色系

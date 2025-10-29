@@ -94,68 +94,112 @@ Consistent use of data attributes for component identification and styling:
 #### Brand Colors (11-step scale)
 ```css
 :root {
-  --brand-050: #EEF6FF;
-  --brand-100: #DBEAFF;
-  --brand-200: #BEDAFF;
-  --brand-300: #8ECCFF;
-  --brand-400: #51A2FF;
-  --brand-500: #2B7FFF; /* Primary brand color */
-  --brand-600: #155DFA;
-  --brand-700: #1347E6;
-  --brand-800: #183CA8;
-  --brand-900: #1C398E;
-  --brand-950: #16245A;
+  --brand-050: #F5F1F0;  /* 最浅背景色 */
+  --brand-100: #E9DDDB;  /* Hover background / light tint */
+  --brand-200: #D6BEBB;  /* Soft background */
+  --brand-300: #B78F8A;  /* Subtle brand tint */
+  --brand-400: #94635E;  /* Hover / outline */
+  --brand-500: #6A4040;  /* Primary brand color */
+  --brand-600: #5B3535;  /* Active / pressed */
+  --brand-700: #4C2D2D;  /* Stronger contrast */
+  --brand-800: #3E2525;  /* Deep background */
+  --brand-900: #2E1C1C;  /* Text on light */
+  --brand-950: #1C1010;  /* Text on dark / darkest tone */
 }
 ```
 
 #### Semantic Color Tokens
 ```css
+
 :root {
-  --background: hsl(0 0% 100%);
-  --foreground: hsl(222.2 84% 4.9%);
-  --card: hsl(0 0% 100%);
-  --card-foreground: hsl(222.2 84% 4.9%);
-  --popover: hsl(0 0% 100%);
-  --popover-foreground: hsl(222.2 84% 4.9%);
-  --primary: hsl(222.2 47.4% 11.2%);
-  --primary-foreground: hsl(210 40% 98%);
-  --secondary: hsl(210 40% 96%);
-  --secondary-foreground: hsl(222.2 84% 4.9%);
-  --muted: hsl(210 40% 96%);
-  --muted-foreground: hsl(215.4 16.3% 46.9%);
-  --accent: hsl(210 40% 96%);
-  --accent-foreground: hsl(222.2 84% 4.9%);
-  --destructive: hsl(0 84.2% 60.2%);
-  --destructive-foreground: hsl(210 40% 98%);
-  --border: hsl(214.3 31.8% 91.4%);
-  --input: hsl(214.3 31.8% 91.4%);
-  --ring: hsl(222.2 84% 4.9%);
+  /* === Light Mode === */
+  --background: hsl(48, 33%, 98%);
+  --foreground: hsl(0, 25%, 33%);
+  --card: hsl(48, 33%, 98%);
+  --card-foreground: hsl(0, 25%, 33%);
+  --popover: hsl(48, 33%, 98%);
+  --popover-foreground: hsl(0, 25%, 33%);
+  --primary: hsl(222, 28%, 14%);
+  --primary-foreground: hsl(48, 33%, 98%);
+  --secondary: hsl(210, 25%, 96%);
+  --secondary-foreground: hsl(0, 25%, 33%);
+  --muted: hsl(210, 25%, 96%);
+  --muted-foreground: hsl(215, 9%, 46%);
+  --accent: hsl(210, 25%, 96%);
+  --accent-foreground: hsl(0, 25%, 33%);
+  --destructive: hsl(0, 82%, 67%);
+  --destructive-foreground: hsl(48, 33%, 98%);
+  --border: hsl(0, 14%, 94%);
+  --input: hsl(214, 27%, 91%);
+  --ring: hsl(0, 25%, 33%);
 }
 
 [data-theme='dark'] {
-  --background: hsl(222.2 84% 4.9%);
-  --foreground: hsl(210 40% 98%);
-  --card: hsl(222.2 84% 4.9%);
-  --card-foreground: hsl(210 40% 98%);
-  --popover: hsl(222.2 84% 4.9%);
-  --popover-foreground: hsl(210 40% 98%);
-  --primary: hsl(210 40% 98%);
-  --primary-foreground: hsl(222.2 47.4% 11.2%);
-  --secondary: hsl(217.2 32.6% 17.5%);
-  --secondary-foreground: hsl(210 40% 98%);
-  --muted: hsl(217.2 32.6% 17.5%);
-  --muted-foreground: hsl(215 20.2% 65.1%);
-  --accent: hsl(217.2 32.6% 17.5%);
-  --accent-foreground: hsl(210 40% 98%);
-  --destructive: hsl(0 62.8% 30.6%);
-  --destructive-foreground: hsl(210 40% 98%);
-  --border: hsl(217.2 32.6% 17.5%);
-  --input: hsl(217.2 32.6% 17.5%);
-  --ring: hsl(212.7 26.8% 83.9%);
+  /* === Dark Mode === */
+  --background: hsl(0, 25%, 6%);
+  --foreground: hsl(48, 33%, 98%);
+  --card: hsl(0, 25%, 6%);
+  --card-foreground: hsl(48, 33%, 98%);
+  --popover: hsl(0, 25%, 6%);
+  --popover-foreground: hsl(48, 33%, 98%);
+  --primary: hsl(48, 33%, 98%);
+  --primary-foreground: hsl(0, 25%, 33%);
+  --secondary: hsl(0, 22%, 14%);
+  --secondary-foreground: hsl(48, 33%, 98%);
+  --muted: hsl(0, 22%, 14%);
+  --muted-foreground: hsl(0, 20%, 75%);
+  --accent: hsl(0, 22%, 14%);
+  --accent-foreground: hsl(48, 33%, 98%);
+  --destructive: hsl(0, 82%, 67%);
+  --destructive-foreground: hsl(48, 33%, 98%);
+  --border: hsl(0, 22%, 14%);
+  --input: hsl(0, 22%, 14%);
+  --ring: hsl(0, 25%, 33%);
+}
+
+
+```
+
+### 2. Font Families
+```css
+/* Import custom fonts */
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('./references/InstrumentSerif-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('./references/InstrumentSerif-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Typography Rules */
+/* Paragraph and text content */
+p, .text-body, .text-content {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6,
+.heading-1, .heading-2, .heading-3, .heading-4, .heading-5, .heading-6 {
+  font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+}
+
+/* Prepositions in headings should use italic */
+h1 .preposition, h2 .preposition, h3 .preposition,
+h4 .preposition, h5 .preposition, h6 .preposition,
+.heading-1 .preposition, .heading-2 .preposition, .heading-3 .preposition,
+.heading-4 .preposition, .heading-5 .preposition, .heading-6 .preposition {
+  font-style: italic;
 }
 ```
 
-### 2. Typography Scale
+### 3. Typography Scale
 ```css
 .text-xxs { font-size: 8px; }   /* Micro text */
 .text-xs  { font-size: 10px; }  /* Caption */
@@ -165,7 +209,7 @@ Consistent use of data attributes for component identification and styling:
 .display-xl { font-size: 60px; } /* Hero headings */
 ```
 
-### 3. Spacing System (4px base unit)
+### 4. Spacing System (4px base unit)
 ```css
 .space-1 { margin: 4px; }   /* XS */
 .space-2 { margin: 8px; }   /* SM */
